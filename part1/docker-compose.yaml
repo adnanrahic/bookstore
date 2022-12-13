@@ -1,6 +1,6 @@
 services:
   books:
-    image: schoren/books
+    image: adnanrahic/books
     build:
       args:
         SERVICE: books
