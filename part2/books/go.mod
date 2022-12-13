@@ -3,7 +3,7 @@ module github.com/adnanrahic/bookstore/part2/books
 go 1.19
 
 require (
-	github.com/adnanrahic/bookstore/part2/lib v0.0.0-20221213115041-467b82dd467f
+	github.com/adnanrahic/bookstore/part2/lib v0.0.0-20221213120244-2b1ec860451d
 	github.com/gorilla/mux v1.8.0
 	go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.37.0
 	go.opentelemetry.io/otel v1.11.2

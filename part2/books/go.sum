@@ -34,8 +34,8 @@ dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod h1:H6x//7
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/OneOfOne/xxhash v1.2.2/go.mod h1:HSdplMjZKSmBqAxg5vPj2TmRDmfkzw+cTzAElWljhcU=
-github.com/adnanrahic/bookstore/part2/lib v0.0.0-20221213115041-467b82dd467f h1:CzrgE39FjxoPJPgNaKQePCZWH3QWmQ5JWNyiS3hI8sE=
-github.com/adnanrahic/bookstore/part2/lib v0.0.0-20221213115041-467b82dd467f/go.mod h1:IAkG7D0LRElRSQ/IFbsSgSU8YpCtT6IfLsoTZS8NpGE=
+github.com/adnanrahic/bookstore/part2/lib v0.0.0-20221213120244-2b1ec860451d h1:LDVgTr1ilb+wUTcta0Ni1HU9B1FEh4IWsCyelfcNtJ4=
+github.com/adnanrahic/bookstore/part2/lib v0.0.0-20221213120244-2b1ec860451d/go.mod h1:IAkG7D0LRElRSQ/IFbsSgSU8YpCtT6IfLsoTZS8NpGE=
 github.com/antihax/optional v1.0.0/go.mod h1:uupD/76wgC+ih3iEmQUL+0Ugr19nfwCT1kdvxnR2qWY=
 github.com/cenkalti/backoff/v4 v4.2.0 h1:HN5dHm3WBOgndBH6E8V0q2jIYIR3s9yglV8k/+MN3u4=
 github.com/cenkalti/backoff/v4 v4.2.0/go.mod h1:Y3VNntkOUPxTVeUxJ/G5vcM//AlwfmyYozVcomhLiZE=
