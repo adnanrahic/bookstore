@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/adnanrahic/bookstore/part2/lib/instrumentation"
 	"github.com/gorilla/mux"
-	"github.com/schoren/bookstore/lib/instrumentation"
 	"go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/trace"

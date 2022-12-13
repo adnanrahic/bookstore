@@ -2,10 +2,7 @@ module github.com/schoren/bookstore/books
 
 go 1.19
 
-replace github.com/schoren/bookstore/lib => ../lib
-
 require (
-  github.com/schoren/bookstore/lib v0.0.0
 	github.com/gorilla/mux v1.8.0
 	go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.36.4
 	go.opentelemetry.io/otel v1.11.1
