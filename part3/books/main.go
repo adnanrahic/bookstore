@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/adnanrahic/bookstore/part3/lib/instrumentation"
 	"github.com/gorilla/mux"
-	"github.com/schoren/bookstore/lib/instrumentation"
 	"go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/trace"
@@ -20,13 +20,13 @@ var tracer trace.Tracer
 func main() {
 	ctx := context.Background()
 
-	exp, err := instrumentation.newExporter(ctx)
+	exp, err := instrumentation.NewExporter(ctx)
 	if err != nil {
 		log.Fatalf("failed to initialize exporter: %v", err)
 	}
 
 	// Create a new tracer provider with a batch span processor and the given exporter.
-	tp := instrumentation.newTraceProvider(exp)
+	tp := instrumentation.NewTraceProvider(svcName, exp)
 
 	// Handle shutdown properly so nothing leaks.
 	defer func() { _ = tp.Shutdown(ctx) }()

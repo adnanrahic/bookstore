@@ -10,6 +10,8 @@ services:
             interval: 1s
             retries: 60
         image: jaegertracing/all-in-one:latest
+        ports:
+            - 16686:16686
         networks:
             default: null
         restart: unless-stopped

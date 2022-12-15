@@ -1,4 +1,4 @@
-module github.com/schoren/bookstore/lib
+module github.com/adnanrahic/bookstore/part3/lib
 
 go 1.19
 
