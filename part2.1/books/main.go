@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"io"
 	"log"
@@ -11,6 +12,7 @@ import (
 	"github.com/gorilla/mux"
 	"go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux"
 	"go.opentelemetry.io/otel"
+	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc"
 	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/sdk/resource"
@@ -100,8 +102,40 @@ func main() {
 }
 
 func booksListHandler(w http.ResponseWriter, r *http.Request) {
-	_, span := tracer.Start(r.Context(), "Books List")
+	ctx, span := tracer.Start(r.Context(), "Books List")
 	defer span.End()
 
-	io.WriteString(w, "Hello!\n")
+	books, err := getBooks(ctx)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		io.WriteString(w, "cannot read books DB")
+		return
+	}
+
+	span.SetAttributes(
+		attribute.Int("books.list.count", len(books)),
+	)
+
+	jsonBooks, err := json.Marshal(books)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		io.WriteString(w, "cannot json encode books DB")
+		return
+	}
+
+	w.Write(jsonBooks)
+}
+
+type book struct {
+	ID    string `json:"id"`
+	Name  string `json:"name"`
+	Price int    `json:"price"`
+}
+
+func getBooks(ctx context.Context) ([]book, error) {
+	return []book{
+		{"1", "Harry Potter", 0},
+		{"2", "Foundation", 0},
+		{"3", "Moby Dick", 0},
+	}, nil
 }

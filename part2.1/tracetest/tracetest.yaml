@@ -1,3 +1,6 @@
+googleAnalytics:
+  enabled: false
+
 demo:
     endpoints:
         otelcart: otel-cartservice:7070
