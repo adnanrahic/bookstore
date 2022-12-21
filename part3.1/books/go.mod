@@ -1,4 +1,4 @@
-module github.com/adnanrahic/bookstore/part3-1/books
+module github.com/adnanrahic/bookstore/part3.1/books
 
 go 1.19
 

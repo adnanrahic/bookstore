@@ -10,7 +10,7 @@ import (
 
 	"github.com/gorilla/mux"
 	// add instrumentation lib
-	"github.com/adnanrahic/bookstore/part3-1/lib/instrumentation"
+	"github.com/adnanrahic/bookstore/part3.1/lib/instrumentation"
 	"go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 	"go.opentelemetry.io/otel"
