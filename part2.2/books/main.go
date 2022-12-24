@@ -208,6 +208,6 @@ func getBooks(ctx context.Context) ([]book, error) {
 		{"1", "Harry Potter", 0},
 		{"2", "Foundation", 0},
 		{"3", "Moby Dick", 0},
-		{"4", "The art of war", 0},
+		{"4", "The art of war", 0}, // Add this book
 	}, nil
 }

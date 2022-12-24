@@ -10,10 +10,10 @@ services:
     depends_on:
       - otel-collector
 
-  # availability:
-  #   image: adnanrahic/availability
-  #   build:
-  #     args:
-  #       SERVICE: availability
-  #   depends_on:
-  #     - otel-collector
+  availability:
+    image: adnanrahic/availability
+    build:
+      args:
+        SERVICE: availability
+    depends_on:
+      - otel-collector
